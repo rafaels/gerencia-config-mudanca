@@ -4,9 +4,10 @@ rvm:
   - 1.9.3
 before_script:
   - bundle exec rake db:create db:migrate db:test:prepare
-  - testando isso aqui vai dar erro
 script:
   - bundle exec rake
+after_script:
+  - testando after
 
 #whitelist
 branches:
