@@ -1,0 +1,12 @@
+language: ruby
+rvm:
+  - 2.0.0
+before_script:
+  - bundle exec rake db:create db:migrate db:test:prepare
+script:
+  - bundle exec rake
+
+#whitelist
+branches:
+  only:
+      - master
